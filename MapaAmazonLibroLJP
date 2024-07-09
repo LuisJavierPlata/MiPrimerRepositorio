@@ -1,1 +1,9 @@
 {"_id":"Articulo","startUrl":["https://www.amazon.com.mx/s?k=luis+javier+plata&__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=19B9GECNPBQKF&sprefix=luis+javier+plata%2Caps%2C152&ref=nb_sb_noss_2"],"selectors":[{"id":"Prueba","parentSelectors":["_root"],"type":"SelectorElementClick","clickActionType":"real","clickElementSelector":"a[aria-label='Ir a la página 1'], span.s-pagination-selected","clickElementUniquenessType":"uniqueText","clickType":"clickOnce","delay":2000,"discardInitialElements":"do-not-discard","multiple":true,"selector":".puisg-col-8-of-16 > div"},{"id":"link","parentSelectors":["Prueba"],"type":"SelectorLink","selector":".a-size-mini a","multiple":false,"linkType":"linkFromHref"},{"id":"encabezado","parentSelectors":["link"],"type":"SelectorText","selector":"span.a-size-extra-large.celwidget","multiple":false,"regex":""}]}
+
+
+Edite el mapa de este archivo anterior ya que no funcionaba, el elemento clic, el 1er elemento no estaba seleccionando los recuados de los libros. Aca el scraper ya modificado:
+
+{"_id":"Articulo","startUrl":["https://www.amazon.com.mx/s?k=luis+javier+plata&__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=19B9GECNPBQKF&sprefix=luis+javier+plata%2Caps%2C152&ref=nb_sb_noss_2"],"selectors":[{"clickActionType":"real","clickElementSelector":"a[aria-label='Ir a la página 1'], span.s-pagination-selected","clickElementUniquenessType":"uniqueText","clickType":"clickOnce","delay":2000,"discardInitialElements":"do-not-discard","id":"Prueba","multiple":true,"parentSelectors":["_root"],"selector":"div.sg-col-4-of-24.s-result-item:nth-of-type(n+2) div.sg-col-inner","type":"SelectorElementClick"},{"id":"link","linkType":"linkFromHref","multiple":false,"parentSelectors":["Prueba"],"selector":".a-size-mini a","type":"SelectorLink"},{"id":"encabezado","multiple":false,"parentSelectors":["link"],"regex":"","selector":"span.a-size-extra-large.celwidget","type":"SelectorText"}]}
+
+Saludos.
+JL.
